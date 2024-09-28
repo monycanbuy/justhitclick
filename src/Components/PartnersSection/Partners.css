@@ -1,0 +1,97 @@
+/* Our Partners Section */
+.partners {
+    width: 100%;
+    min-height: 20vh;
+    margin: 20px auto;
+    padding: 20px 0;
+    background: linear-gradient(to bottom right, #9921c4, #db2feb);
+    text-align: center;
+    overflow: hidden; /* Prevent overflow causing horizontal scroll */
+    margin-top: 0;
+}
+
+.partners h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Container for partner images */
+.partners-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    overflow: hidden; /* Avoid any accidental overflow */
+}
+
+.partner-item {
+    flex: 1 0 200px; /* Adjusts image size */
+    min-width: 50px;
+    max-width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.partner-item img {
+    width: 35%; /* Set images to full width of their container */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.partner-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1024px) {
+    .partners-container {
+        justify-content: space-evenly;
+    }
+
+    .partner-item {
+        flex-basis: 20%;
+        max-width: 250px;
+    }
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    .partners-container {
+        display: flex;
+        gap: 10px; /* Reduce gap for smaller screens */
+        padding: 0 15px;
+    }
+
+    .partner-item {
+        flex-basis: 45%; /* Allow items to take up more space */
+        min-width: 120px;
+    }
+
+    .partners h2 {
+        font-size: 28px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .partners-container {
+        padding: 0 5px;
+        justify-content: center;
+        gap: 5px; /* Further reduce gaps */
+    }
+
+    .partner-item {
+        flex-basis: 80%;
+        min-width: 100px; /* Ensure smaller minimum width */
+    }
+
+    .partners h2 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,243 @@
+/* Contact Section */
+.contact {
+  margin: 80px auto;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+}
+
+/* Individual column styling */
+.contact-col {
+  flex-basis: 48%;
+  color: #fcfcfc;
+  width: 100%;
+}
+
+.contact-col h3 {
+  color: #9921c4;
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-col h3 img {
+  width: 35px;
+  margin-left: 10px;
+}
+
+.contact-col p {
+  max-width: 450px;
+  line-height: 1.6;
+  color: #db2feb;
+}
+
+.contact-col ul li {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #db2feb;
+  font-weight: bold;
+}
+
+.contact-col ul li img {
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.contact form input,
+.contact form select,
+.contact form textarea {
+  display: block;
+  width: 100%;
+  background: #EBECFE;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  resize: none;
+  border-radius: 10px;
+}
+
+.contact form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background: #9921c4;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact form button:hover {
+  background: #db2feb;
+  color: #f9f9f9;
+}
+
+
+.contact form button img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+/* White spinner */
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-top: 3px solid #fff; /* White spinner */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Responsive Design - For Medium Screens */
+@media screen and (max-width: 1024px) {
+  .contact {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .contact-col {
+    flex-basis: 100%;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    font-size: 14px;
+    width: 100%; /* Ensures full width on medium screens */
+  }
+
+  .contact form button {
+    padding: 12px 25px;
+  }
+}
+
+/* Responsive Design - For Small Screens */
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 15px;
+  }
+
+  .contact-col h3 {
+    font-size: 22px;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    padding: 12px;
+    width: 100%; /* Ensures full width on small screens */
+  }
+
+  .contact form button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .contact form button img {
+    width: 18px;
+  }
+}
+
+/* Responsive Design - For Extra Small Screens */
+@media screen and (max-width: 480px) {
+  .contact {
+    padding: 10px;
+  }
+
+  .contact-col h3 {
+    font-size: 20px;
+  }
+
+  .contact-col p {
+    font-size: 14px;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    font-size: 13px;
+    padding: 10px;
+    width: 100%; /* Ensures full width on small screens */
+  }
+
+  .contact form button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .contact-col ul li img {
+    width: 30px;
+  }
+}
+
+
+
+/* .contact{
+  margin: 80px auto;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-col{
+  flex-basis: 48%;
+  color: #fcfcfc;
+}
+.contact-col h3{
+  color: #9921c4;
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contact-col h3 img{
+  width: 35px;
+  margin-left: 10px;
+}
+.contact-col p{
+  max-width: 450px;
+  list-style: 0.3;
+  color: #db2feb;
+}
+.contact-col ul li{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #db2feb;
+  font-weight: bold;
+}
+.contact-col ul li img{
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.contact form input,.contact form textarea{
+  display: block;
+  width: 100%;
+  background: #EBECFE;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  resize: none;
+  border-radius: 10px;
+} */

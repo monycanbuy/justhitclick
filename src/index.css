@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  
+  background: #fafaf7;
+}
+/* Container */
+a{
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.6;
+  cursor: pointer;
+}
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: color-mix(in srgb, #9609bd 30%, #db2feb 70%);
+  color: #fcfcfc;
+  padding: 14px 25px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 15px;
+  
+  transition: background all 0.3s ease;
+  position: relative; /* Necessary for the up and down movement */
+  animation: bounce 2s infinite; /* Applying the bounce animation */
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.cta-button img{
+  width: 30px;
+  margin-left: 10px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Starting and ending at original position */
+  }
+  50% {
+    transform: translateY(-3px); /* Move 10px upwards */
+  }
+}
+
+.cta-button:hover {
+  background: #fcfcfc;
+  color: #9921c4;
+  animation-play-state: paused; /* Pause the bounce animation */
+}
+
+
+
+
+@media (max-width:1200px){
+  .container{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .cta-button{
+    padding: 14px 22px !important;
+  }
+}
+
+@media (max-width:840px){
+  .contact-col{
+    width: 100%;
+  }
+  .cta-button{
+    padding: 8px 14px !important;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-col{
+    width: 100%;
+  }
+  .cta-button{
+    padding: 8px 10px !important;
+    font-size: 14px;
+  }
+}
+
+/* Additional styles for smaller screens */
+@media screen and (max-width: 480px) {
+  .contact-col{
+    width: 100%;
+  }
+  nav ul li {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    font-size: 12px;
+    padding: 6px 9px !important;
+  }
+  
+}

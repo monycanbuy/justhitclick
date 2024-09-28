@@ -1,0 +1,141 @@
+/* Footer Styles */
+.footer {
+    background: #08003a;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .company-info h3 {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  .nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  .contact-btn {
+    background-color: #fff;
+    color: #9921c4;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: #9921c4;
+    color: #fff;
+  }
+  
+  /* Footer Bottom Section */
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-divider {
+    border: none;
+    border-top: 1px solid #fff;
+    margin: 20px auto;
+    width: 90%;
+  }
+  .contact-info ul li{
+    list-style: none;
+  }
+  
+  .rights-reserved {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+  }
+  @media (max-width: 480px) {
+    .company-info h3 {
+      font-size: 18px;
+      font-weight: bolder;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .company-info h3 {
+      font-size: 16px;
+      font-weight: bolder;
+    }
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .nav-menu ul li {
+      margin-bottom: 8px;
+    }
+  
+    .social-icons img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .company-info h3 {
+      font-size: 14px;
+      font-weight: bolder;
+    }
+  
+    .nav-menu ul li a {
+      font-size: 14px;
+    }
+  
+    .contact-btn {
+      padding: 8px 16px;
+    }
+  
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
