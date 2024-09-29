@@ -7,7 +7,7 @@ const About = () => {
     <div className="about">
       <div className="about-left">
         <img src={logo} alt="logo" className="about-img" />
-        <img src="play-icon.png" alt="Play Video" className="play-icon" />
+        {/* <img src="play-icon.png" alt="Play Video" className="play-icon" /> */}
       </div>
       <div className="about-right">
         <h3>About Justhitclick-Digital Technologies Ltd.</h3>
