@@ -43,6 +43,9 @@
   color: #db2feb;
   font-weight: bold;
 }
+.contact-col span{
+  color: #db2feb !important;
+}
 
 .contact-col ul li img {
   width: 35px;
@@ -84,6 +87,7 @@
   background: #db2feb;
   color: #f9f9f9;
 }
+
 
 
 .contact form button img {

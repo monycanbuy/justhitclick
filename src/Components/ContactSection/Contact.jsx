@@ -1,78 +1,36 @@
-import React, { useEffect, useState } from "react";
 import "./Contact.css";
 import sms from "../../assets/images/sms_icon.png";
 import phone from "../../assets/images/call_icon.jpeg";
 import arrow from "../../assets/images/Arrow.png";
 import location from "../../assets/images/location.png";
 import message from "../../assets/images/message.png";
-import { useDispatch, useSelector } from "react-redux";
-import { createContact } from "../../featured/redux/customerSlice";
+import React from "react";
 
 const Contact = () => {
-  const dispatch = useDispatch();
-  const { status, error } = useSelector((state) => state.customer);
+  const [result, setResult] = React.useState("");
 
-  // Initial form state
-  const initialState = {
-    fullName: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-    howDidYouHearAboutUs: "",
-  };
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-  const [formData, setFormData] = useState(initialState);
-  const [showMessage, setShowMessage] = useState(false);
-  const [phoneError, setPhoneError] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false); // Track form submission state
+    formData.append("access_key", "bb2290ba-d1c4-43e6-9999-3a53f9381149");
 
-  const validatePhoneNumber = (number) => {
-    const phoneRegex = /^\+?\d{10,15}$/; // Allows + sign and 10-15 digits
-    return phoneRegex.test(number);
-  };
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const data = await response.json();
 
-    // Phone number validation
-    if (name === "phoneNumber") {
-      if (!validatePhoneNumber(value)) {
-        setPhoneError("Invalid phone number. Please enter a valid number.");
-      } else {
-        setPhoneError("");
-      }
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
     }
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!phoneError && !isSubmitting) {
-      setIsSubmitting(true); // Disable button while submitting
-      dispatch(createContact(formData));
-    }
-  };
-
-  // Reset form when the submission is successful
-  useEffect(() => {
-    if (status === "succeeded") {
-      setFormData(initialState); // Reset form fields
-      setShowMessage(true); // Show success message
-      setIsSubmitting(false); // Re-enable button after success
-
-      // Set a timer to hide the message after 15 seconds
-      const timer = setTimeout(() => {
-        setShowMessage(false);
-      }, 15000);
-
-      // Cleanup the timer when component unmounts or when status changes
-      return () => clearTimeout(timer);
-    }
-
-    if (status === "failed") {
-      setIsSubmitting(false); // Re-enable button if submission failed
-    }
-  }, [status]); // Effect runs when `status` changes
 
   return (
     <section className="contact">
@@ -109,77 +67,40 @@ const Contact = () => {
         </ul>
       </div>
       <div className="contact-col">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={onSubmit}>
           <label>Your Name</label>
           <input
             type="text"
-            name="fullName"
-            placeholder="Enter your name"
-            value={formData.fullName}
-            onChange={handleChange}
+            name="name"
+            placeholder="Enter Your Fullname"
             required
           />
-          <label>Phone Number</label>
+          <label>Mobile Number</label>
           <input
             type="tel"
-            name="phoneNumber"
-            placeholder="Enter your Mobile Number"
-            value={formData.phoneNumber}
-            onChange={handleChange}
+            name="phone"
+            placeholder="Enter Your Mobile Number"
             required
           />
-          {phoneError && <p className="error">{phoneError}</p>}
           <label>E-Mail</label>
           <input
             type="email"
             name="email"
-            placeholder="Enter your E-mail Address"
-            value={formData.email}
-            onChange={handleChange}
+            placeholder="Enter Your E-Mail"
             required
           />
-          <label>How did you hear about us?</label>
-          <select
-            name="howDidYouHearAboutUs"
-            value={formData.howDidYouHearAboutUs}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select an option</option>
-            <option value="Google">Google</option>
-            <option value="Social Media">Social Media</option>
-            <option value="Friend or Family">Friend or Family</option>
-            <option value="Other">Other</option>
-          </select>
-          <label>Write your messages here</label>
+          <label>Write your message</label>
           <textarea
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             rows={6}
-            placeholder="Write your message here"
+            placeholder="Enter Your Message Here"
             required
           ></textarea>
-          {/* Disable button when submitting */}
-          <button
-            type="submit"
-            className="btn cta-button"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? (
-              <span className="spinner"></span> // Add loading spinner
-            ) : (
-              <>
-                Submit now <img src={arrow} alt="" />
-              </>
-            )}
+          <button type="submit" className="btn cta-button">
+            Submit Now <img src={arrow} alt="" />
           </button>
         </form>
-        {status === "loading" && <p>Submitting...</p>}
-        {status === "succeeded" && showMessage && (
-          <p>Message sent successfully!</p>
-        )}
-        {status === "failed" && <p>Error: {error}</p>}
+        <span className="res">{result}</span>
       </div>
     </section>
   );
