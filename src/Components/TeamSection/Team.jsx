@@ -6,7 +6,7 @@ import pics3 from "../../assets/images/blessing.png";
 
 const Team = () => {
   return (
-    <section className="team-section">
+    <section className="team-section team">
       <h2>Meet Our Team</h2>
       <div className="team-container">
         <div className="team-card">

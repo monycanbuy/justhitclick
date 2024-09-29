@@ -89,6 +89,14 @@ const Contact = () => {
             placeholder="Enter Your E-Mail"
             required
           />
+          <label>How did you hear about us?</label>
+          <select type="select" name="howDidYouHearAboutUs" required>
+            <option value="">Select an option</option>
+            <option value="Google">Google</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Friend or Family">Friend or Family</option>
+            <option value="Other">Other</option>
+          </select>
           <label>Write your message</label>
           <textarea
             name="message"
