@@ -21,7 +21,7 @@ const Hero = () => {
         <ul>
           <li>
             <Link
-              to="contact"
+              to="portfolio"
               smooth="true"
               offset={-260}
               duration={500}
