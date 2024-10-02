@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import arrow from "../../assets/images/Arrow.png";
+import arrow from "../../assets/images/rightArrow.svg";
 import { Link } from "react-scroll";
 
 const Hero = () => {

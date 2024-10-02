@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 import logo from "../../assets/images/jhcLogo.png";
-import menu from "../../assets/images/menu.svg";
+import menu from "../../assets/images/menus.svg";
 import { Link } from "react-scroll";
 
 const Header = () => {

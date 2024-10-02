@@ -1,9 +1,9 @@
 import "./Contact.css";
 import sms from "../../assets/images/sms_icon.png";
-import phone from "../../assets/images/call_icon.jpeg";
+import phone from "../../assets/images/purpphone.svg";
 import arrow from "../../assets/images/Arrow.png";
-import location from "../../assets/images/location.png";
-import message from "../../assets/images/message.png";
+import location from "../../assets/images/purpmap.svg";
+import message from "../../assets/images/purpmail.svg";
 import React from "react";
 
 const Contact = () => {
