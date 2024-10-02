@@ -4,7 +4,7 @@ nav{
   color: #fcfcfc;
   padding: 4px 0;
   position: fixed;
-  top: 0;
+  top: fixed;
   left: 0;
   display: flex;
   align-items: center;
