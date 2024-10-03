@@ -11,6 +11,15 @@ nav{
   justify-content: space-between;
   z-index: 10;
 }
+.logo-link {
+  display: inline-block; /* Ensures the logo behaves as a block element */
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
+}
+
+.logo-link img {
+  height: 50px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
 .logo{
   width: 50px;
   border-radius: 40px;

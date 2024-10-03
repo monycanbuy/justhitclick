@@ -1,0 +1,68 @@
+/* WebDevelopmentDetails.css */
+.webdev-details {
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .webdev-header {
+    background-color: #db2feb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .webdev-header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .webdev-content {
+    margin-top: 30px;
+  }
+  
+  .webdev-content h2 {
+    color: #9609bd;
+    margin-bottom: 15px;
+  }
+  
+  .webdev-services ul,
+  .webdev-why ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .webdev-services li,
+  .webdev-why li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .webdev-tech p {
+    line-height: 1.8;
+  }
+  
+  .webdev-cta {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .webdev-cta h2 {
+    color: #db2feb;
+  }
+  
+  .webdev-cta p {
+    font-size: 18px;
+    color: #333;
+  }
+  .mobile-dev-footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .mobile-dev-footer a {
+    color: #db2feb;
+    text-decoration: underline;
+  }
+  

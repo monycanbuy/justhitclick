@@ -47,6 +47,8 @@ a{
   margin-left: 10px;
 }
 
+
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0); /* Starting and ending at original position */

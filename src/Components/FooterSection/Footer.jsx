@@ -5,10 +5,24 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link, useLocation, useNavigate } from "react-router-dom"; // Import useLocation and useNavigate
 import "./Footer.css";
-import { Link } from "react-scroll";
 
 const Footer = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+  const location = useLocation(); // Get current location
+
+  // Function to handle "Get in Touch" click
+  const handleGetInTouch = () => {
+    if (location.pathname !== "/") {
+      // If not on homepage, navigate to /contact
+      navigate("/contact");
+    } else {
+      // If on homepage, scroll to the contact section
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="footer container">
       <div className="footer-section company-info">
@@ -74,15 +88,9 @@ const Footer = () => {
         </p>
         <ul>
           <li>
-            <Link
-              to="contact"
-              smooth="true"
-              offset={-260}
-              duration={500}
-              className="cta-button"
-            >
+            <button className="cta-button" onClick={handleGetInTouch}>
               Get in Touch
-            </Link>
+            </button>
           </li>
         </ul>
       </div>

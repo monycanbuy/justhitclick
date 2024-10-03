@@ -5,6 +5,7 @@ import arrow from "../../assets/images/Arrow.png";
 import location from "../../assets/images/purpmap.svg";
 import message from "../../assets/images/purpmail.svg";
 import React from "react";
+import Title from "../Title/Title";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");

@@ -3,6 +3,7 @@ import "./Service.css";
 import internet from "../../assets/images/internet.svg";
 import mobile from "../../assets/images/mobile.png";
 import iot from "../../assets/images/cloud.png";
+
 const Service = () => {
   return (
     <div className="services-container">
@@ -13,6 +14,9 @@ const Service = () => {
           <p>
             Building modern, responsive websites using the latest technologies.
           </p>
+          <a href="/webdetails" target="_blank" className="read-more">
+            Read More
+          </a>
         </div>
       </div>
       <div className="service">
@@ -23,6 +27,9 @@ const Service = () => {
             Creating seamless and engaging mobile applications for iOS and
             Android.
           </p>
+          <a href="/mobiledetails" target="_blank" className="read-more">
+            Read More
+          </a>
         </div>
       </div>
       <div className="service">
@@ -33,6 +40,9 @@ const Service = () => {
             Innovative IoT solutions that integrate hardware and software for
             smart devices.
           </p>
+          <a href="/iotdetails" target="_blank" className="read-more">
+            Read More
+          </a>
         </div>
       </div>
     </div>

@@ -1,0 +1,55 @@
+/* src/Components/MobileDevelopmentDetails/MobileDevelopmentDetails.css */
+
+.mobile-development-details {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  .mobile-dev-header {
+    text-align: center;
+    background-color: #db2feb;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .mobile-dev-header h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  .mobile-dev-header p {
+    font-size: 18px;
+  }
+  
+  .mobile-dev-content h2 {
+    color: #db2feb;
+    margin-top: 30px;
+  }
+  
+  .mobile-dev-content p, .mobile-dev-content ul {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  
+  .mobile-dev-content ul {
+    margin-left: 20px;
+  }
+  
+  .mobile-dev-content ul li {
+    margin-bottom: 10px;
+  }
+  
+  .mobile-dev-footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .mobile-dev-footer a {
+    color: #db2feb;
+    text-decoration: underline;
+  }
+  
