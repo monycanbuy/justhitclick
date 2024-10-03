@@ -14,7 +14,7 @@ const Service = () => {
           <p>
             Building modern, responsive websites using the latest technologies.
           </p>
-          <a href="/webdetails" target="_blank" className="read-more">
+          <a href="/webdetails" className="read-more">
             Read More
           </a>
         </div>
@@ -27,7 +27,7 @@ const Service = () => {
             Creating seamless and engaging mobile applications for iOS and
             Android.
           </p>
-          <a href="/mobiledetails" target="_blank" className="read-more">
+          <a href="/mobiledetails" className="read-more">
             Read More
           </a>
         </div>
@@ -40,7 +40,7 @@ const Service = () => {
             Innovative IoT solutions that integrate hardware and software for
             smart devices.
           </p>
-          <a href="/iotdetails" target="_blank" className="read-more">
+          <a href="/iotdetails" className="read-more">
             Read More
           </a>
         </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import "./Hero.css";
+import "./HeroBanner.css";
 import arrow from "../../assets/images/rightArrow.svg";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
-const Hero = () => {
+const HeroBanner = () => {
   return (
-    <section className="hero container">
+    <section className="herobg container">
       <div className="hero-text">
         <h1>
           Bringing
@@ -21,13 +21,13 @@ const Hero = () => {
         <ul>
           <li>
             <Link
-              to="herobanner"
+              to="portfolio"
               smooth="true"
               offset={-260}
               duration={500}
               className="cta-button"
             >
-              Learn More <img src={arrow} alt="" />
+              View Portfolio <img src={arrow} alt="" />
             </Link>
           </li>
         </ul>
@@ -36,4 +36,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroBanner;
