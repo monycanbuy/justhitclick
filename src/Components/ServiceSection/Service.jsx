@@ -3,6 +3,7 @@ import "./Service.css";
 import internet from "../../assets/images/internet.svg";
 import mobile from "../../assets/images/mobile.png";
 import iot from "../../assets/images/cloud.png";
+import { Link } from "react-router-dom"; // Import Link for client-side navigation
 
 const Service = () => {
   return (
@@ -14,9 +15,9 @@ const Service = () => {
           <p>
             Building modern, responsive websites using the latest technologies.
           </p>
-          <a href="/webdetails" className="read-more">
+          <Link to="/webdetails" className="read-more">
             Read More
-          </a>
+          </Link>
         </div>
       </div>
       <div className="service">
@@ -27,9 +28,9 @@ const Service = () => {
             Creating seamless and engaging mobile applications for iOS and
             Android.
           </p>
-          <a href="/mobiledetails" className="read-more">
+          <Link to="/mobiledetails" className="read-more">
             Read More
-          </a>
+          </Link>
         </div>
       </div>
       <div className="service">
@@ -40,9 +41,9 @@ const Service = () => {
             Innovative IoT solutions that integrate hardware and software for
             smart devices.
           </p>
-          <a href="/iotdetails" className="read-more">
+          <Link to="/iotdetails" className="read-more">
             Read More
-          </a>
+          </Link>
         </div>
       </div>
     </div>
