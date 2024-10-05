@@ -1,7 +1,5 @@
 import React from "react";
 import "./HeroBanner.css";
-import arrow from "../../assets/images/rightArrow.svg";
-import { Link } from "react-scroll";
 
 const HeroBanner = () => {
   return (

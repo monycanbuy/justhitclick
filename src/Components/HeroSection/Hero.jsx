@@ -21,7 +21,7 @@ const Hero = () => {
         <ul>
           <li>
             <Link
-              to="herobanner"
+              to="conpany-details"
               smooth="true"
               offset={-260}
               duration={500}

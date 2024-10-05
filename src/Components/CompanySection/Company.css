@@ -1,0 +1,36 @@
+.about-details-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-company, .how-we-deliver, .why-choose-us {
+    margin-bottom: 2rem;
+  }
+  
+  .about-company h2, .how-we-deliver h2, .why-choose-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #9609bd;
+  }
+  
+  .about-company p, .how-we-deliver ul, .why-choose-us p {
+    font-size: 1.2rem;
+    color: #db2feb;
+  }
+  
+  .how-we-deliver ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .why-choose-us ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .why-choose-us li, .how-we-deliver li {
+    margin-bottom: 0.5rem;
+    color: #9609bd;
+  }
+  

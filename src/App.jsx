@@ -8,6 +8,7 @@ import WebDetails from "./Components/WebSection/WebDetails";
 import IotDetails from "./Components/IotSection/IotDetails";
 import Contact from "./Components/ContactSection/Contact";
 import Layout from "./Layout";
+import Company from "./Components/CompanySection/Company";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/webdetails" element={<WebDetails />} />
           <Route path="/iotdetails" element={<IotDetails />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/conpany-details" element={<Company />} />
           {/* <Route path="/herobanner" element={<HeroBanner />} /> */}
         </Routes>
       </div>
